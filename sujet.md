@@ -27,6 +27,7 @@ In our opinion, testing under various real-world conditions and, more specifical
 These tests were contributed by several different contributors with the intent of catching any future changes or regressions regarding null inputs or the handling of specific iterator functions at the test level. The mere fact that it contains `@Test(expected=NullPointerException.class)` and similar patterns enforces handling those edge cases and its detection if the bug reappears.
 This bug was rather local in that it mainly addressed input validation problems in the IteratorUtils class. Extra tests are added to guarantee that when these functions would be updated in the future or modified, mistakes would be found early during testing. 
 here is an example sample of the code : 
+
 ![example](https://github.com/user-attachments/assets/4b926fe0-e799-45de-8b62-a466c4ee2fe6)
 
 
