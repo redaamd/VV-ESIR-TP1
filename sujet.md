@@ -32,23 +32,29 @@ here is an example sample of the code :
 
 
 3. The paper outlines several concrete experiments that Netflix conducts regularly as part of their Chaos Engineering. Here's a brief overview based on the document presented:
+
 **Concrete Experiments :** 
 Chaos Monkey: This internal service randomly terminates virtual machine instances hosting production services to ensure that services can survive instance failures. It runs when people are at work-that is, during regular working hours-so that engineers are around to respond rapidly to any issues popping up.
 Chaos Kong: Simulates the failure of an entire Amazon EC2 region, further testing the resiliency of the system against larger-scale failures.
 Failure Injection Testing FIT: Intentional request failures between services within Netflix let the team confirm that the system gracefully degrades during a failure condition.
+
 **Requirements for Experiments :** 
 Steady State Definition: Define an output measure indicating the normal state of the system.
 Hypothesis Formulation: A hypothesis should be formulated based on what one expects as a steady state behavior of the experiment. 
 **Realistic Variables:** 
 The experiments should introduce real life events that may affect the performance of the system, such as server crashes or network failures. Production Environment: Run experiments in the production environment so that one can assess and observe real user impact on the system behavior. 
+
 **Variables Observed :**
 Steady State Metrics: For example, SPS will be constantly monitored as part of efforts towards the quantification of the impact brought about by the introduction of faults. To that effect, it is ensured that the system is available to the users to deliver content before and after these experiments are conducted. It also includes the general user experience, including the deterioration in the quality of service. 
+
 **Primary Outcomes :** the primary results that were obtained from this experiment, include the following:
  A hike in the level of confidence about the system's ability to deal with failure.
 Understanding how the different parts of the system interact when they are under stress.
 Resilience in an engineering culture that designs services with failure in mind.
+
 **Other Companies Running Similar Experiments :**
 Chaos Engineering is not peculiar to Netflix. Other companies, like Amazon, Google, Microsoft, and Facebook, have done similar things to test the resilience of their systems. It does point to a greater recognition of the importance of fault tolerance in today's modern software development.
+
 **Speculation on Implementation in Other Organizations :**
 Other organizations can do similar experiments by doing the following:
 Determining Critical Services: It would include pinpointing those services that are vital to their operations and which can only afford to have a minimal amount of failure.
@@ -98,6 +104,8 @@ This, in fact, makes it more understandable to people who knew the original spec
 
 
 All in all, the author does not say that removes the need for testing. The mechanized specification supplements testing in that it puts a formal basis on which bugs can be found out and correctness can be established. One is not to pass over testing, since it is also an integral part in the process of development-a great way for bugs to be found out that might not be as easily observed from purely formal proofs.
+
+
 
 
 **Conclusion :**
